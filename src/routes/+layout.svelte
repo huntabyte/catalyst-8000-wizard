@@ -2,10 +2,8 @@
 	import '../app.css';
 </script>
 
-<div class="container mx-auto px-4 py-4">
-	<nav>
-		<a href="/">Home</a>
-		<a href="/about">About</a>
-	</nav>
-	<slot />
+<div class="absolute top-0 left-0 w-screen h-screen">
+	<div class="w-full h-full">
+		<slot />
+	</div>
 </div>
