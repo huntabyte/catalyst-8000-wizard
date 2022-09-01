@@ -13,6 +13,10 @@
 		completed = false;
 	}
 
+	function changePage(num) {
+		pageCounter = num;
+	}
+
 	function filterVoice() {
 		currentDevices = currentDevices.filter((device) => device.voice == true);
 		modular = true;
