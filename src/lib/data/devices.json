@@ -1,6 +1,7 @@
 [
     {
-        "pn": "C8200L-1N-4T",
+        "part_number": "C8200L-1N-4T",
+        "description": "C8200 1RU w/ 1 NIM slot and 4x 1 Gigabit Ethernet WAN ports",
         "voice": true,
         "tier_zero": true,
         "tier_one": true,
@@ -16,10 +17,35 @@
         "family": "C8200",
         "types": [
             "Branch"
-        ]
+        ],
+        "specs": {
+            "10g_port_density": 0,
+            "1g_port_density": 4,
+            "sm_slots": 0,
+            "nim_slots": 1,
+            "pim_slots": 1,
+            "memory_default": "4GB",
+            "storage_default": "-"
+        },
+        "performance": {
+            "ipv4_forwarding": "3.8 Gbps",
+            "ipsec_throughput": "500 Mbps",
+            "ipsec_svti_tunnels": 1500
+        },
+        "scalability": {
+            "acls": 4000,
+            "ipv4_aces": 72000,
+            "ipv4_routes": "800K (4GB) - 4M (32GB)",
+            "ipv6_routes": "800K (4GB) - 4M (32GB)",
+            "queues": 16000,
+            "nat_sessions": "600K (4GB) - 2M (32GB)",
+            "fw_sessions": 512000,
+            "vrfs": 2000
+        }
     },
     {
-        "pn": "C8200-1N-4T",
+        "part_number": "C8200-1N-4T",
+        "description": "C8200 1RU w/ 1 NIM slot and 4x 1 Gigabit Ethernet WAN ports",
         "voice": true,
         "tier_zero": true,
         "tier_one": true,
@@ -35,10 +61,35 @@
         "family": "C8200",
         "types": [
             "Branch"
-        ]
+        ],
+        "specs": {
+            "10g_port_density": 0,
+            "1g_port_density": 4,
+            "sm_slots": 0,
+            "nim_slots": 1,
+            "pim_slots": 1,
+            "memory_default": "8GB",
+            "storage_default": "16GB"
+        },
+        "performance": {
+            "ipv4_forwarding": "3.8 Gbps",
+            "ipsec_throughput": "1 Gbps",
+            "ipsec_svti_tunnels": 2500
+        },
+        "scalability": {
+            "acls": 4000,
+            "ipv4_aces": 72000,
+            "ipv4_routes": "1.6M (8GB) - 4M (32GB)",
+            "ipv6_routes": "1.5M (8GB) - 4M (32GB)",
+            "queues": 16000,
+            "nat_sessions": "1.2M (8GB) - 2M (32GB)",
+            "fw_sessions": 512000,
+            "vrfs": 4000
+        }
     },
     {
-        "pn": "C8300-2N2S-4T2X",
+        "part_number": "C8300-2N2S-4T2X",
+        "description": "C8300 2RU w/ 10G WAN (2 SM and 2 NIM slots, and 2 x 10-Gigabit Ethernet and 4 x 1-Gigabit Ethernet ports)",
         "voice": true,
         "tier_zero": true,
         "tier_one": true,
@@ -54,10 +105,35 @@
         "family": "C8300",
         "types": [
             "Branch"
-        ]
+        ],
+        "specs": {
+            "10g_port_density": 2,
+            "1g_port_density": 4,
+            "sm_slots": 2,
+            "nim_slots": 2,
+            "pim_slots": 1,
+            "memory_default": "8GB",
+            "storage_default": "16GB"
+        },
+        "performance": {
+            "ipv4_forwarding": "19.7 Gbps",
+            "ipsec_throughput": "18.8 Gbps",
+            "ipsec_svti_tunnels": 4000
+        },
+        "scalability": {
+            "acls": 4000,
+            "ipv4_aces": 72000,
+            "ipv4_routes": "1.6M (8GB) - 4M (32GB)",
+            "ipv6_routes": "1.5M (8GB) - 4M (32GB)",
+            "queues": 16000,
+            "nat_sessions": "1.2M (8GB) - 2M (32GB)",
+            "fw_sessions": 512000,
+            "vrfs": 4000
+        }
     },
     {
-        "pn": "C8300-2N2S-6T",
+        "part_number": "C8300-2N2S-6T",
+        "description": "C8300 2RU w/ 1G WAN (2 SM and 2 NIM slots, and 6 x 1-Gigabit Ethernet ports)",
         "voice": true,
         "tier_zero": true,
         "tier_one": true,
@@ -73,10 +149,35 @@
         "family": "C8300",
         "types": [
             "Branch"
-        ]
+        ],
+        "specs": {
+            "10g_port_density": 0,
+            "1g_port_density": 6,
+            "sm_slots": 2,
+            "nim_slots": 2,
+            "pim_slots": 1,
+            "memory_default": "8GB",
+            "storage_default": "16GB"
+        },
+        "performance": {
+            "ipv4_forwarding": "19.7 Gbps",
+            "ipsec_throughput": "1.9 Gbps",
+            "ipsec_svti_tunnels": 4000
+        },
+        "scalability": {
+            "acls": 4000,
+            "ipv4_aces": 72000,
+            "ipv4_routes": "1.6M (8GB) - 4M (32GB)",
+            "ipv6_routes": "1.5M (8GB) - 4M (32GB)",
+            "queues": 16000,
+            "nat_sessions": "1.2M (8GB) - 2M (32GB)",
+            "fw_sessions": 512000,
+            "vrfs": 4000
+        }
     },
     {
-        "pn": "C8300-1N1S-4T2X",
+        "part_number": "C8300-1N1S-4T2X",
+        "description": "C8300 1RU w/ 10G WAN (1 SM slot and 1 NIM slot, and 2 x 10-Gigabit Ethernet and 4 x 1-Gigabit Ethernet ports)",
         "voice": true,
         "tier_zero": true,
         "tier_one": true,
@@ -93,10 +194,35 @@
         "family": "C8300",
         "types": [
             "Branch"
-        ]
+        ],
+        "specs": {
+            "10g_port_density": 2,
+            "1g_port_density": 4,
+            "sm_slots": 1,
+            "nim_slots": 1,
+            "pim_slots": 1,
+            "memory_default": "8GB",
+            "storage_default": "16GB"
+        },
+        "performance": {
+            "ipv4_forwarding": "19.7 Gbps",
+            "ipsec_throughput": "15.8 Gbps",
+            "ipsec_svti_tunnels": 4000
+        },
+        "scalability": {
+            "acls": 4000,
+            "ipv4_aces": 72000,
+            "ipv4_routes": "1.6M (8GB) - 4M (32GB)",
+            "ipv6_routes": "1.5M (8GB) - 4M (32GB)",
+            "queues": 16000,
+            "nat_sessions": "1.2M (8GB) - 2M (32GB)",
+            "fw_sessions": 512000,
+            "vrfs": 4000
+        }
     },
     {
-        "pn": "C8300-1N1S-6T",
+        "part_number": "C8300-1N1S-6T",
+        "description": "C8300 1RU w/ 1G WAN (1 SM slot and 1 NIM slot, and 6 x 1-Gigabit Ethernet ports)",
         "voice": true,
         "tier_zero": true,
         "tier_one": true,
@@ -113,10 +239,35 @@
         "family": "C8300",
         "types": [
             "Branch"
-        ]
+        ],
+        "specs": {
+            "10g_port_density": 0,
+            "1g_port_density": 6,
+            "sm_slots": 1,
+            "nim_slots": 2,
+            "pim_slots": 1,
+            "memory_default": "8GB",
+            "storage_default": "16GB"
+        },
+        "performance": {
+            "ipv4_forwarding": "19.7 Gbps",
+            "ipsec_throughput": "1.9 Gbps",
+            "ipsec_svti_tunnels": 4000
+        },
+        "scalability": {
+            "acls": 4000,
+            "ipv4_aces": 72000,
+            "ipv4_routes": "1.6M (8GB) - 4M (32GB)",
+            "ipv6_routes": "1.5M (8GB) - 4M (32GB)",
+            "queues": 16000,
+            "nat_sessions": "1.2M (8GB) - 2M (32GB)",
+            "fw_sessions": 512000,
+            "vrfs": 4000
+        }
     },
     {
-        "pn": "C8500L-8S4X",
+        "part_number": "C8500L-8S4X",
+        "description": "",
         "voice": false,
         "tier_zero": false,
         "tier_one": false,
@@ -132,10 +283,35 @@
         "family": "C8500",
         "types": [
             "WAN Aggregation"
-        ]
+        ],
+        "specs": {
+            "10g_port_density": 12,
+            "1g_port_density": 4,
+            "sm_slots": 0,
+            "nim_slots": 0,
+            "pim_slots": 0,
+            "memory_default": "16GB",
+            "storage_default": "32GB"
+        },
+        "performance": {
+            "ipv4_forwarding": "20 Gbps",
+            "ipsec_throughput": "19 Gbps",
+            "ipsec_svti_tunnels": 4000
+        },
+        "scalability": {
+            "acls": 4000,
+            "ipv4_aces": 50000,
+            "ipv4_routes": "3.5M (16GB)",
+            "ipv6_routes": "2.2M (16GB)",
+            "queues": 16000,
+            "nat_sessions": "2M",
+            "fw_sessions": "2M",
+            "vrfs": 8000
+        }
     },
     {
-        "pn": "C8500-12X",
+        "part_number": "C8500-12X",
+        "description": "",
         "voice": false,
         "tier_zero": false,
         "tier_one": false,
@@ -152,10 +328,35 @@
         "types": [
             "WAN Aggregation",
             "Head-end"
-        ]
+        ],
+        "specs": {
+            "10g_port_density": 12,
+            "1g_port_density": 12,
+            "sm_slots": 0,
+            "nim_slots": 0,
+            "pim_slots": 0,
+            "memory_default": "16GB",
+            "storage_default": "32GB"
+        },
+        "performance": {
+            "ipv4_forwarding": "118 Gbps",
+            "ipsec_throughput": "84 Gbps",
+            "ipsec_svti_tunnels": 4000
+        },
+        "scalability": {
+            "acls": 4000,
+            "ipv4_aces": 47000,
+            "ipv4_routes": "4M (16GB)",
+            "ipv6_routes": "4M (16GB)",
+            "queues": "256K",
+            "nat_sessions": "12M",
+            "fw_sessions": "6M",
+            "vrfs": 8000
+        }
     },
     {
-        "pn": "C8500-12X4QC",
+        "part_number": "C8500-12X4QC",
+        "description": "",
         "voice": false,
         "tier_zero": false,
         "tier_one": false,
@@ -172,6 +373,30 @@
         "types": [
             "WAN Aggregation",
             "Head-end"
-        ]
+        ],
+        "specs": {
+            "10g_port_density": 12,
+            "1g_port_density": 12,
+            "sm_slots": 0,
+            "nim_slots": 0,
+            "pim_slots": 0,
+            "memory_default": "16GB",
+            "storage_default": "32GB"
+        },
+        "performance": {
+            "ipv4_forwarding": "197 Gbps",
+            "ipsec_throughput": "135 Gbps",
+            "ipsec_svti_tunnels": 4000
+        },
+        "scalability": {
+            "acls": 4000,
+            "ipv4_aces": "380K",
+            "ipv4_routes": "4M (16GB)",
+            "ipv6_routes": "4M (16GB)",
+            "queues": "256K",
+            "nat_sessions": "16M",
+            "fw_sessions": "6M",
+            "vrfs": 8000
+        }
     }
 ]
