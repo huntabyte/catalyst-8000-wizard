@@ -4,6 +4,7 @@
 	import QuestionMultipleChoice from '$lib/components/QuestionMultipleChoice.svelte';
 	import ResultsCard from '$lib/components/ResultsCard.svelte';
 	import StartCard from '$lib/components/StartCard.svelte';
+	import InfoModal from '$lib/components/InfoModal.svelte';
 
 	let pageCounter = 0;
 	let currentDevices = devices;
@@ -172,34 +173,40 @@
 			<StartCard action={() => (pageCounter = 1)} />
 		{:else if pageCounter === 1}
 			<QuestionBool
-				question={'Do you plan on using this router for voice?'}
+				question={'Will this router be used for voice?'}
 				yesAction={filterVoice}
 				noAction={() => changePage(1.5)}
 				restart={() => handleReset()}
+				info={true}
+				content={'By voice, we mean provide rich-media capabilities such as high-density voice connectivity, conferencing, transcoding, media optimization, transrating, and secure voice for Cisco Unified Communications solutions. This capability involves the use of Packet Voice Digital Signal Process Modules (PVDMs).'}
 			/>
 		{:else if pageCounter === 1.5}
 			<QuestionBool
-				question={'Do you need port expandability or advanced layer 2 support?'}
+				question={'Will this router require port expandability or EtherSwitch capabilities?'}
 				yesAction={filterVoice}
 				noAction={() => changePage(2)}
 				restart={() => handleReset()}
+				info={true}
+				content={'Port expandability and EtherSwitch capabilities require Network Interface Modules (NIMs). If the device you are replacing is currently using NIMs, you will be able to use the same NIMs in the Catalyst 8000 Series router.'}
 			/>
 		{:else if pageCounter === 2}
 			<QuestionMultipleChoice
 				question={'Which of these options best fits your speed/bandwidth requirement?'}
 				choices={speedChoices}
 				restart={() => handleReset()}
+				info={true}
+				content={'Catalyst 8000 Series devices require DNA licensing to operate. Different devices support different DNA tiers, and the tiers are broken up by speed/bandwidth.'}
 			/>
 		{:else if pageCounter === 2.5}
 			<QuestionBool
-				question={'Do you need 40GE or 100GE WAN ports?'}
+				question={'Does this router need to have 40GE or 100GE WAN interfaces?'}
 				yesAction={() => filterFortyGig(true)}
 				noAction={() => filterFortyGig(false)}
 				restart={() => handleReset()}
 			/>
 		{:else if pageCounter === 2.65}
 			<QuestionMultipleChoice
-				question={'What is the purpose of this device?'}
+				question={'What will this device be deployed as?'}
 				choices={purposeChoices}
 				restart={() => handleReset()}
 			/>
@@ -211,14 +218,14 @@
 			/>
 		{:else if pageCounter === 3}
 			<QuestionBool
-				question={'Do you need 10GE WAN ports?'}
+				question={'Does this router need to have 10GE WAN interfaces?'}
 				yesAction={() => filterTenGig(true)}
 				noAction={() => filterTenGig(false)}
 				restart={() => handleReset()}
 			/>
 		{:else if pageCounter === 3.5}
 			<QuestionBool
-				question={'Do you plan to expand your WAN speed or add more than one network module in the future?'}
+				question={'Do you plan to expand your WAN speed or add more than one network interface module in the future?'}
 				yesAction={() => filterFamily('C8300')}
 				noAction={() => filterFamily('C8200')}
 				restart={() => handleReset()}

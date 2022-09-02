@@ -28,6 +28,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"daisyui": "^2.24.0"
+		"daisyui": "^2.24.0",
+		"svelte-icons": "^2.1.0"
 	}
 }

@@ -1,7 +1,7 @@
 [
     {
         "part_number": "C8200L-1N-4T",
-        "description": "C8200 1RU w/ 1 NIM slot and 4x 1 Gigabit Ethernet WAN ports",
+        "description": "Modular enterprise branch edge platform with 2x SFP ports, 2x 1G Copper, 1x NIM and 1x PIM",
         "voice": true,
         "tier_zero": true,
         "tier_one": true,
@@ -45,7 +45,7 @@
     },
     {
         "part_number": "C8200-1N-4T",
-        "description": "C8200 1RU w/ 1 NIM slot and 4x 1 Gigabit Ethernet WAN ports",
+        "description": "Modular enterprise branch edge platform with 2x SFP ports, 2x 1G Copper, 1x NIM and 1x PIM",
         "voice": true,
         "tier_zero": true,
         "tier_one": true,
@@ -89,7 +89,7 @@
     },
     {
         "part_number": "C8300-2N2S-4T2X",
-        "description": "C8300 2RU w/ 10G WAN (2 SM and 2 NIM slots, and 2 x 10-Gigabit Ethernet and 4 x 1-Gigabit Ethernet ports)",
+        "description": "Modular Enterprise Branch 2 rack unit 10G WAN 1PIM/2NIM/2SM Slots Cisco SD-WAN",
         "voice": true,
         "tier_zero": true,
         "tier_one": true,
@@ -133,7 +133,7 @@
     },
     {
         "part_number": "C8300-2N2S-6T",
-        "description": "C8300 2RU w/ 1G WAN (2 SM and 2 NIM slots, and 6 x 1-Gigabit Ethernet ports)",
+        "description": "Modular Enterprise Branch 2 rack unit 1G WAN 1PIM/2NIM/2SM Slots Cisco SD-WAN",
         "voice": true,
         "tier_zero": true,
         "tier_one": true,
@@ -177,7 +177,7 @@
     },
     {
         "part_number": "C8300-1N1S-4T2X",
-        "description": "C8300 1RU w/ 10G WAN (1 SM slot and 1 NIM slot, and 2 x 10-Gigabit Ethernet and 4 x 1-Gigabit Ethernet ports)",
+        "description": "Modular Enterprise Branch 1 rack unit 10G WAN 1PIM/1NIM/1SM Slots Cisco SD-WAN",
         "voice": true,
         "tier_zero": true,
         "tier_one": true,
@@ -222,7 +222,7 @@
     },
     {
         "part_number": "C8300-1N1S-6T",
-        "description": "C8300 1RU w/ 1G WAN (1 SM slot and 1 NIM slot, and 6 x 1-Gigabit Ethernet ports)",
+        "description": "Modular Enterprise Branch 1 rack unit 1G WAN 1PIM/1NIM/1SM Slots Cisco SD-WAN",
         "voice": true,
         "tier_zero": true,
         "tier_one": true,
@@ -267,7 +267,7 @@
     },
     {
         "part_number": "C8500L-8S4X",
-        "description": "Cisco Catalyst 8500 Series 12-port SFP+, 8x1GE,4x10GE",
+        "description": "Edge platform with 4x SFP+ ports, 8x SFP ports",
         "voice": false,
         "tier_zero": false,
         "tier_one": false,
@@ -311,7 +311,7 @@
     },
     {
         "part_number": "C8500-12X",
-        "description": "Cisco Catalyst 8500 Series 12-port SFP+",
+        "description": "Edge Platform with 12x SFP+ ports",
         "voice": false,
         "tier_zero": false,
         "tier_one": false,
@@ -356,7 +356,7 @@
     },
     {
         "part_number": "C8500-12X4QC",
-        "description": "Cisco Catalyst 8500 Series 12-port SFP+, 2-port QSFP+, 2-port QSPF28",
+        "description": "Edge Platform with 12x SFP+ ports, 2x QSFP+ ports, and 2x QSFP28 ports",
         "voice": false,
         "tier_zero": false,
         "tier_one": false,
