@@ -1,9 +1,9 @@
 export const constants = {
 	'10g_port_density': '10GE Port Density',
 	'1g_port_density': '1GE Port Density',
-	sm_slots: 'Service Module Slots',
-	nim_slots: 'Network Interface Module Slots',
-	pim_slots: 'Pluggable Interface Module Slots',
+	sm_slots: 'Service Module (SM) Slots',
+	nim_slots: 'Network Interface Module (NIM) Slots',
+	pim_slots: 'Pluggable Interface Module (PIM) Slots',
 	memory_default: 'Default Memory',
 	storage_default: 'Default Storage',
 	ipv4_forwarding: 'IPv4 Forwarding',
@@ -22,9 +22,9 @@ export const constants = {
 export const specs = {
 	'10g_port_density': '10GE Port Density',
 	'1g_port_density': '1GE Port Density',
-	sm_slots: 'Service Module Slots',
-	nim_slots: 'Network Interface Module Slots',
-	pim_slots: 'Pluggable Interface Module Slots',
+	sm_slots: 'Service Module (SM) Slots',
+	nim_slots: 'Network Interface Module (NIM) Slots',
+	pim_slots: 'Pluggable Interface Module (PIM) Slots',
 	memory_default: 'Default Memory',
 	storage_default: 'Default Storage'
 };

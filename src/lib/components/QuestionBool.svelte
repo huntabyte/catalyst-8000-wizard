@@ -7,7 +7,7 @@
 
 <div class="w-full h-full">
 	<div class="flex flex-col justify-center items-center h-full w-full mx-auto px-6">
-		<div class="card w-3/4 bg-neutral text-neutral-content shadow-xl py-12">
+		<div class="card w-3/4 bg-white shadow-xl py-12">
 			<div class="card-body items-center text-center">
 				<h2 class="card-title text-3xl">{question}</h2>
 				<p>{note}</p>

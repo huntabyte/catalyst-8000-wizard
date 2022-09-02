@@ -1,8 +1,8 @@
 <script>
-	import devices from '$lib/data/devices.json';
 	import { specs, performance, scalability } from '$lib/constants.js';
 
-	let results = devices.filter((device) => device.ru == 2);
+	export let results;
+	export let restart;
 </script>
 
 <div class="w-full h-full pt-8">
@@ -10,9 +10,12 @@
 		<div class="flex w-11/12 justify-between">
 			<div class="pb-4">
 				<h1 class="text-4xl font-medium pb-2">Results</h1>
-				<p class="italic">Based on the questions you answered, here's what we recommend.</p>
+				<p class="italic w-2/3">
+					Based on the questions you answered, here's what we recommend. Sometimes, there is more
+					than one option so you can compare the full specifications of each.
+				</p>
 			</div>
-			<button class="btn btn-primary">Restart</button>
+			<button on:click={restart} class="btn btn-primary">Start Over</button>
 		</div>
 		<div class="card w-11/12 bg-white shadow-xl h-auto pb-8">
 			<div class="grid grid-cols-3 divide-x h-48">

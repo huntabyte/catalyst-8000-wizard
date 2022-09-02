@@ -267,7 +267,7 @@
     },
     {
         "part_number": "C8500L-8S4X",
-        "description": "",
+        "description": "Cisco Catalyst 8500 Series 12-port SFP+, 8x1GE,4x10GE",
         "voice": false,
         "tier_zero": false,
         "tier_one": false,
@@ -311,7 +311,7 @@
     },
     {
         "part_number": "C8500-12X",
-        "description": "",
+        "description": "Cisco Catalyst 8500 Series 12-port SFP+",
         "voice": false,
         "tier_zero": false,
         "tier_one": false,
@@ -356,7 +356,7 @@
     },
     {
         "part_number": "C8500-12X4QC",
-        "description": "",
+        "description": "Cisco Catalyst 8500 Series 12-port SFP+, 2-port QSFP+, 2-port QSPF28",
         "voice": false,
         "tier_zero": false,
         "tier_one": false,
