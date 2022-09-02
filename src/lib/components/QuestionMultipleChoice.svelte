@@ -2,6 +2,7 @@
 	export let question = 'Loading...';
 	export let note = '';
 	export let choices;
+	export let restart;
 </script>
 
 <div class="w-full h-full">
@@ -20,7 +21,7 @@
 			</div>
 		</div>
 		<div class="w-3/4 flex justify-end pt-4">
-			<button class="btn btn-ghost self-end">Start Over</button>
+			<button on:click={restart} class="btn btn-ghost self-end">Start Over</button>
 		</div>
 	</div>
 </div>
