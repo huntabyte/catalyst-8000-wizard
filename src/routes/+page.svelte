@@ -156,45 +156,53 @@
 				question={'Do you plan on using this router for voice?'}
 				yesAction={filterVoice}
 				noAction={() => changePage(1.5)}
+				restart={() => handleReset()}
 			/>
 		{:else if pageCounter === 1.5}
 			<QuestionBool
 				question={'Do you need port expandability or advanced layer 2 support?'}
 				yesAction={filterVoice}
 				noAction={() => changePage(2)}
+				restart={() => handleReset()}
 			/>
 		{:else if pageCounter === 2}
 			<QuestionMultipleChoice
 				question={'Which of these options best fits your speed/bandwidth requirement?'}
 				choices={speedChoices}
+				restart={() => handleReset()}
 			/>
 		{:else if pageCounter === 2.5}
 			<QuestionBool
 				question={'Do you need 40GE or 100GE WAN ports?'}
 				yesAction={() => filterFortyGig(true)}
 				noAction={() => filterFortyGig(false)}
+				restart={() => handleReset()}
 			/>
 		{:else if pageCounter === 2.65}
 			<QuestionMultipleChoice
 				question={'What is the purpose of this device?'}
 				choices={purposeChoices}
+				restart={() => handleReset()}
 			/>
 		{:else if pageCounter === 2.75}
 			<QuestionMultipleChoice
 				question={'What is the purpose of this device?'}
 				choices={purposeChoices}
+				restart={() => handleReset()}
 			/>
 		{:else if pageCounter === 3}
 			<QuestionBool
 				question={'Do you need 10GE WAN ports?'}
 				yesAction={() => filterTenGig(true)}
 				noAction={() => filterTenGig(false)}
+				restart={() => handleReset()}
 			/>
 		{:else if pageCounter === 3.5}
 			<QuestionBool
 				question={'Do you plan to expand your WAN speed or add more than one network module in the future?'}
 				yesAction={() => filterFamily('C8300')}
 				noAction={() => filterFamily('C8200')}
+				restart={() => handleReset()}
 			/>
 		{:else if pageCounter === 999}
 			<ResultsCard results={currentDevices} restart={() => handleReset()} />

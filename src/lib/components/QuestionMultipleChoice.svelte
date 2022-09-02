@@ -19,5 +19,8 @@
 				</div>
 			</div>
 		</div>
+		<div class="w-3/4 flex justify-end pt-4">
+			<button class="btn btn-ghost self-end">Start Over</button>
+		</div>
 	</div>
 </div>

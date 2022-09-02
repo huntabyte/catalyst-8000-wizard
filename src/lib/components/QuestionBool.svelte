@@ -3,6 +3,7 @@
 	export let note = '';
 	export let yesAction;
 	export let noAction;
+	export let restart;
 </script>
 
 <div class="w-full h-full">
@@ -16,6 +17,9 @@
 					<button on:click={noAction} class="btn btn-error w-24">No</button>
 				</div>
 			</div>
+		</div>
+		<div class="w-3/4 flex justify-end pt-4">
+			<button on:click={restart} class="btn btn-ghost self-end">Start Over</button>
 		</div>
 	</div>
 </div>
