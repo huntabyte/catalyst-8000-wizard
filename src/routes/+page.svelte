@@ -1,10 +1,11 @@
 <script>
 	import devices from '$lib/data/devices.json';
+	import QuestionBool from '$lib/components/QuestionBool.svelte';
+	import QuestionMultipleChoice from '$lib/components/QuestionMultipleChoice.svelte';
+
 	let pageCounter = 0;
 
 	let currentDevices = devices;
-	let completed = false;
-	let speed;
 	let modular;
 
 	function handleReset() {
@@ -46,10 +47,30 @@
 		console.log(currentDevices);
 	}
 
-	function filterFortyGig() {
-		currentDevices = currentDevices.filter((device) => device.forty_ge == true);
-		console.log(currentDevices);
-		completed = true;
+	function filterPurpose(value) {
+		if (value === 0) {
+			currentDevices = currentDevices.filter((device) => device.types.includes('Branch'));
+			console.log(currentDevices);
+		} else if (value === 1) {
+			currentDevices = currentDevices.filter((device) => device.types.includes('WAN Aggregation'));
+			console.log(currentDevices);
+		} else if (value === 2) {
+			currentDevices = currentDevices.filter((device) => device.types.includes('Head-end'));
+			console.log(currentDevices);
+		}
+		pageCounter = 999;
+	}
+
+	function filterFortyGig(bool) {
+		if (bool) {
+			currentDevices = currentDevices.filter((device) => device.forty_ge == true);
+			console.log(currentDevices);
+			pageCounter = 999;
+		} else {
+			currentDevices = currentDevices.filter((device) => device.forty_ge == false);
+			console.log(currentDevices);
+			pageCounter = 2.75;
+		}
 	}
 
 	function filterTenGig(type) {
@@ -62,6 +83,47 @@
 			console.log(currentDevices);
 		}
 	}
+
+	let speedChoices = [
+		{
+			content: '<= 50Mbps',
+			action: filterSpeed,
+			value: 0
+		},
+		{
+			content: '50 - 400Mbps',
+			action: filterSpeed,
+			value: 1
+		},
+		{
+			content: '401Mbps - 2Gbps',
+			action: filterSpeed,
+			value: 2
+		},
+		{
+			content: '> 2Gbps',
+			action: filterSpeed,
+			value: 3
+		}
+	];
+
+	let purposeChoices = [
+		{
+			content: 'Branch',
+			action: filterPurpose,
+			value: 0
+		},
+		{
+			content: 'WAN Aggregation',
+			action: filterPurpose,
+			value: 1
+		},
+		{
+			content: 'Head-end',
+			action: filterPurpose,
+			value: 2
+		}
+	];
 </script>
 
 <div class="w-full h-full">
@@ -77,57 +139,33 @@
 			</p>
 			<button on:click={() => (pageCounter = 1)} class="btn btn-primary mt-8"> Get Started </button>
 		{:else if pageCounter === 1}
-			<h1 class="text-3xl max-w-6xl text-center font-bold">
-				Do you plan on using this router for <span class="underline"> voice</span>?
-			</h1>
-			<div class="flex justify-center pt-6">
-				<button on:click={filterVoice} class="btn btn-success mx-4 w-1/2"> Yes </button>
-				<button on:click={() => (pageCounter = 1.5)} class="btn btn-error mx-4 w-1/2"> No </button>
-			</div>
+			<QuestionBool
+				question={'Do you plan on using this router for voice?'}
+				yesAction={filterVoice}
+				noAction={() => changePage(1.5)}
+			/>
 		{:else if pageCounter === 1.5}
-			<h1 class="text-3xl max-w-6xl text-center font-bold">
-				Does this device need to support network/service modules?
-			</h1>
-			<div class="flex justify-center pt-6">
-				<button on:click={filterVoice} class="btn btn-success mx-4 w-1/2"> Yes </button>
-				<button on:click={() => (pageCounter = 2)} class="btn btn-error mx-4 w-1/2"> No </button>
-			</div>
+			<QuestionBool
+				question={'Do you need port expandability or advanced layer 2 support?'}
+				yesAction={filterVoice}
+				noAction={() => changePage(2)}
+			/>
 		{:else if pageCounter === 2}
-			<h1 class="text-3xl max-w-6xl text-center font-bold">
-				Which of these options best fits your <span class="underline"> speed/bandwidth</span> requirement?
-			</h1>
-			<div class="flex justify-center pt-6">
-				<button
-					on:click={() => filterSpeed(0)}
-					class="btn btn-ghost btn-outline mx-4 w-52 normal-case"
-				>
-					&lt;= 50Mbps
-				</button>
-				<button
-					on:click={() => filterSpeed(1)}
-					class="btn btn-ghost btn-outline mx-4 w-52 normal-case"
-				>
-					51 - 400Mbps
-				</button>
-				<button
-					on:click={() => filterSpeed(2)}
-					class="btn btn-ghost btn-outline mx-4 w-52 normal-case"
-				>
-					401Mbps - 2Gbps
-				</button>
-				<button
-					on:click={() => filterSpeed(3)}
-					class="btn btn-ghost btn-outline mx-4 w-52 normal-case"
-				>
-					&gt; 2Gbps
-				</button>
-			</div>
+			<QuestionMultipleChoice
+				question={'Which of these options best fits your speed/bandwidth requirement?'}
+				choices={speedChoices}
+			/>
 		{:else if pageCounter === 2.5}
-			<h1 class="text-3xl max-w-6xl text-center font-bold">Do you need 40GE or 100GE WAN ports?</h1>
-			<div class="flex justify-center pt-6">
-				<button on:click={() => filterFortyGig()} class="btn btn-success mx-4 w-1/2"> Yes </button>
-				<button class="btn btn-error mx-4 w-1/2"> No </button>
-			</div>
+			<QuestionBool
+				question={'Do you need 40GE or 100GE WAN ports?'}
+				yesAction={() => filterFortyGig(true)}
+				noAction={() => filterFortyGig(false)}
+			/>
+		{:else if pageCounter === 2.75}
+			<QuestionMultipleChoice
+				question={'What is the purpose of this device?'}
+				choices={purposeChoices}
+			/>
 		{:else if pageCounter === 3}
 			<h1 class="text-3xl max-w-6xl text-center font-bold">Do you need 10GE WAN ports?</h1>
 			<div class="flex justify-center pt-6">

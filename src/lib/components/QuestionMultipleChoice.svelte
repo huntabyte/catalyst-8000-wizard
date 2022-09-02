@@ -1,8 +1,7 @@
 <script>
-	export let question;
+	export let question = 'Loading...';
 	export let note = '';
-	export let yesAction;
-	export let noAction;
+	export let choices;
 </script>
 
 <div class="w-full h-full">
@@ -12,8 +11,12 @@
 				<h2 class="card-title text-3xl">{question}</h2>
 				<p>{note}</p>
 				<div class="card-actions justify-end pt-6 gap-4">
-					<button on:click={yesAction} class="btn btn-success w-24">Yes</button>
-					<button on:click={noAction} class="btn btn-error w-24">No</button>
+					{#each choices as choice}
+						<button
+							on:click={() => choice.action(choice.value)}
+							class="btn btn-outline btn-info min-w-full normal-case">{choice.content}</button
+						>
+					{/each}
 				</div>
 			</div>
 		</div>
