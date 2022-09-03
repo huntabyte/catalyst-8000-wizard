@@ -1,38 +1,21 @@
-# create-svelte
+# Catalyst 8000 Wizard
+A simple questionnaire application that helps in determining which Catalyst 8000 device you should consider based on your unique requirements.
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+[Live Demo](https://c8000-selection-wizard.vercel.app/)
 
-## Creating a project
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Project Inspiration
+Considering the substantial differences between previous generations of Cisco routers (ASR 1000 Series & ISR 4000 Series) to the latest Catalyst 8000 Edge Platforms, I felt a tool to assist with migration/selection would be helpful. There isn't particularly a one-to-one swap, and a lot of variables can determine which device you actually need, but by answering a few questions, this application can put you on the right track.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Tech Stack
 
-## Developing
+**Client:** SvelteKit, TailwindCSS, DaisyUI
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+**Server:** Node, Express
 
-```bash
-npm run dev
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Acknowledgements
+ - [Cisco Catalyst 8500 Series Datasheet](https://www.cisco.com/c/en/us/products/collateral/routers/catalyst-8500-series-edge-platforms/datasheet-c78-744089.html?oid=dstetr023042) (used to determine specifications of devices.)
+ - [Cisco Catalyst 8300 Series Datasheet](https://www.cisco.com/c/en/us/products/collateral/routers/catalyst-8300-series-edge-platforms/datasheet-c78-744088.html) (used to determine specifications of devices.)
+ - [Cisco Catalyst 8200 Series Datasheet](https://www.cisco.com/c/en/us/products/collateral/routers/catalyst-8200-series-edge-platforms/nb-06-cat8200-series-edge-plat-ds-cte-en.html) (used to determine specifications of devices.)
