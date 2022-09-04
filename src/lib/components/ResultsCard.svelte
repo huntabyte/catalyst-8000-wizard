@@ -5,7 +5,7 @@
 	export let restart;
 </script>
 
-<div class="w-full h-full pt-4 md:container md:pt-8 md:mx-auto px-1.5 mb-4">
+<div class="w-full h-full pt-6 md:container md:pt-8 md:mx-auto px-1.5 mb-4">
 	<div class="flex flex-col items-center h-full w-full md:mx-auto">
 		<div class="flex w-full md:px-2 justify-between">
 			<div class="pb-4">
@@ -17,10 +17,10 @@
 			<button on:click={restart} class="btn btn-primary btn-sm md:btn-md ml-6">Start Over</button>
 		</div>
 		<div class="md:card h-auto pb-8 md:pb-8 px-0">
-			<div class="grid grid-cols-3 divide-x divide-slate-700 lg:h-48">
-				<div class="w-full h-full md:px-2" />
+			<div class="grid grid-cols-3 divide-x divide-slate-700">
+				<div class="w-full md:px-2" />
 				{#each results as result}
-					<div class="w-full h-full md:px-4 py-6">
+					<div class="w-full md:px-4 py-6 md:pb-2">
 						<div class="flex flex-col h-auto justify-between">
 							<div>
 								<h1 class="font-semibold text-center text-sm sm:text-xl">{result.part_number}</h1>
@@ -28,14 +28,14 @@
 									{result.description}
 								</p>
 							</div>
-							<div class="hidden md:pt-4 lg:block">
+							<div class="hidden md:pt-4 lg:inline-block mb-2 pb-2">
 								<img src="img/{result.part_number}.webp" alt="Recommended device" />
 							</div>
 						</div>
 					</div>
 				{/each}
 			</div>
-			<div class="flex w-full h-8 md:h-12 bg-slate-600 items-center md:mt-4">
+			<div class="flex w-full h-8 md:h-12 bg-slate-600 items-center">
 				<div class="px-3 md:px-4">
 					<h3 class="font-semibold text-sm md:text-base">Platform Specifications</h3>
 				</div>
