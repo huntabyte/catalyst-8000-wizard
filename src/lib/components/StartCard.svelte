@@ -1,17 +1,21 @@
 <script>
+	import FaChevronDown from 'svelte-icons/fa/FaChevronDown.svelte';
 	export let action;
 </script>
 
-<div class="card w-3/4 bg-white shadow-xl h-auto py-12 px-4">
-	<div class="flex flex-col items-center justify-center w-full">
-		<h1 class="text-3xl text-center font-bold">Catalyst 8000 Series Selection Wizard</h1>
-		<p class="text-center pt-4 w-5/6 max-w-6xl text-xl">
+<div class="flex flex-col items-center justify-center w-full h-screen md:container">
+	<div class="flex flex-col items-center justify-center">
+		<h1 class="text-5xl md:text-7xl text-center max-w-4xl md:pb-6 leading-tight">
+			Welcome to the Catalyst 8000 selection wizard
+		</h1>
+		<p class="font-thin md:font-normal text-center pt-4 w-5/6 max-w-2xl text-2xl leading-snug">
 			This tool will help you identify what Catalyst 8000 device you need by asking you a few quick
 			questions about your unique requirements.
 		</p>
-		<p class="text-center pt-2 w-5/6 max-w-6xl text-xl italic text-gray-400">
-			This should only take a few seconds.
-		</p>
-		<button on:click={action} class="btn btn-primary mt-8"> Get Started </button>
 	</div>
+	<button on:click={action} class="btn btn-circle btn-primary btn-lg mt-12">
+		<div class="h-8 w-8 text-base-100">
+			<FaChevronDown />
+		</div>
+	</button>
 </div>

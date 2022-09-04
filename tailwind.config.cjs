@@ -2,22 +2,25 @@
 module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
+		fontFamily: {
+			display: ['Source Sans Pro', 'sans-serif']
+		},
 		extend: {}
 	},
-	plugins: [require('daisyui')],
+	plugins: [require('@tailwindcss/typography'), require('daisyui')],
 	daisyui: {
 		themes: [
 			{
 				mytheme: {
-					primary: '#570DF8',
-					secondary: '#F000B8',
-					accent: '#37CDBE',
-					neutral: '#3D4451',
-					'base-100': '#f3f4f6',
-					info: '#3ABFF8',
-					success: '#36D399',
-					warning: '#FBBD23',
-					error: '#F87272'
+					primary: '#ffb500',
+					secondary: '#0dcdff',
+					accent: '#0a837f',
+					neutral: '#ffffff',
+					'base-100': '#212A32',
+					info: '#8BE8FD',
+					success: '#52FA7C',
+					warning: '#F1FA89',
+					error: '#FF5757'
 				}
 			}
 		]

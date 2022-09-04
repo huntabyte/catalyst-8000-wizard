@@ -2,3 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer components {
+    body {
+        @apply font-display
+    }
+}
+
+.bg-gradient {
+    background: radial-gradient(97.25% 97.25% at 50% 2.75%, #2C363E 0%, #2C363E 0.01%, #192026 100%);
+}
+
+h1 {
+    font-weight: 300;
+}
+
+body {
+    color: #ffffff;
+}
