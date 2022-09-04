@@ -4,7 +4,6 @@
 	import QuestionMultipleChoice from '$lib/components/QuestionMultipleChoice.svelte';
 	import ResultsCard from '$lib/components/ResultsCard.svelte';
 	import StartCard from '$lib/components/StartCard.svelte';
-	import InfoModal from '$lib/components/InfoModal.svelte';
 
 	let pageCounter = 0;
 	let currentDevices = devices;
@@ -168,7 +167,9 @@
 </script>
 
 <div class="w-full h-full">
-	<div class="flex flex-col justify-center items-center h-full w-full mx-auto px-6">
+	<div
+		class="flex flex-col justify-center items-center h-full w-full mx-auto px-1.5 md:px-6 overflow-x-hidden"
+	>
 		{#if pageCounter === 0}
 			<StartCard action={() => (pageCounter = 1)} />
 		{:else if pageCounter === 1}
