@@ -5,8 +5,8 @@
 	export let restart;
 </script>
 
-<div class="w-full h-full pt-6 md:container md:pt-8 md:mx-auto px-1.5 mb-4">
-	<div class="flex flex-col items-center h-full w-full md:mx-auto">
+<div class="w-full h-full pt-6 md:container md:pt-8 md:mx-auto mb-4">
+	<div class="flex flex-col items-center h-auto w-full md:mx-auto">
 		<div class="flex w-full md:px-2 justify-between">
 			<div class="pb-4">
 				<h1 class="text-4xl font-medium pb-2">Results</h1>

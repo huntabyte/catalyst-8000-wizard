@@ -3,7 +3,7 @@
 	export let action;
 </script>
 
-<div class="flex flex-col items-center justify-center w-full h-screen md:container">
+<div class="flex flex-col items-center justify-center w-full h-full md:container">
 	<div class="flex flex-col items-center justify-center">
 		<h1 class="text-5xl md:text-7xl text-center max-w-4xl md:pb-6 leading-tight">
 			Welcome to the Catalyst 8000 selection wizard
