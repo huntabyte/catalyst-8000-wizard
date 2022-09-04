@@ -47,7 +47,7 @@
 		if (tier === 3) {
 			currentDevices = currentDevices.filter((device) => device.tier_three == true);
 			if (modular) {
-				pageCounter = 3;
+				pageCounter = 999;
 				console.log(currentDevices);
 			} else {
 				pageCounter = 2.5;
