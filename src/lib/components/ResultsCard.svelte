@@ -1,5 +1,10 @@
 <script>
 	import { specs, performance, scalability } from '$lib/constants.js';
+	import { device } from '$lib/stores.js';
+
+	function updateDevice(selection) {
+		device.update((device) => selection);
+	}
 
 	export let results;
 	export let restart;
@@ -31,6 +36,13 @@
 							<div class="hidden md:pt-4 lg:inline-block mb-2 pb-2">
 								<img src="img/{result.part_number}.webp" alt="Recommended device" />
 							</div>
+							<a
+								href="/customize"
+								on:click={updateDevice(result)}
+								class="btn btn-success btn-ghost text-success"
+							>
+								Customize and Build
+							</a>
 						</div>
 					</div>
 				{/each}

@@ -45,6 +45,55 @@
         },
         "build_options": [
             {
+                "key": "dna_package",
+                "display": "DNA Subscription Package",
+                "type": "radio",
+                "value": "A",
+                "options": [
+                    {
+                        "selected": true,
+                        "display": "Advantage",
+                        "description": "",
+                        "value": "A"
+                    },
+                    {
+                        "selected": false,
+                        "display": "Essentials",
+                        "description": "",
+                        "value": "E"
+                    },
+                    {
+                        "selected": false,
+                        "display": "Premier",
+                        "description": "",
+                        "value": "P"
+                    }
+                ]
+            },
+            {
+                "key": "dna_tier",
+                "display": "DNA Bandwidth Tier",
+                "type": "radio",
+                "value": "T2",
+                "options": [
+                    {
+                        "selected": false,
+                        "display": "Tier 0 (Up to 50M Agg.)",
+                        "value": "T0"
+                    },
+                    {
+                        "selected": false,
+                        "display": "Tier 1 (Up to 400M Agg.)",
+                        "value": "T1"
+                    },
+                    {
+                        "selected": true,
+                        "display": "Tier 2 (Up to 2G Agg.)",
+                        "value": "T2"
+                    }
+                ]
+            },
+            {
                 "key": "dna_duration",
                 "display": "DNA Subscription Duration",
                 "type": "radio",
@@ -132,6 +181,24 @@
                 ]
             },
             {
+                "key": "image",
+                "display": "Software Image",
+                "type": "radio",
+                "value": "SC8KBEUK9-176",
+                "options": [
+                    {
+                        "selected": false,
+                        "display": "IOS-XE 17.5",
+                        "value": "SC8KBEUK9-175"
+                    },
+                    {
+                        "selected": true,
+                        "display": "IOS-XE 17.6",
+                        "value": "SC8KBEUK9-176"
+                    }
+                ]
+            },
+            {
                 "key": "power_cable",
                 "display": "Power Cable",
                 "type": "radio",
@@ -160,6 +227,52 @@
                 ]
             },
             {
+                "key": "hsec",
+                "display": "HSEC License",
+                "type": "radio",
+                "value": 0,
+                "options": [
+                    {
+                        "selected": false,
+                        "display": "None",
+                        "value": 0
+                    },
+                    {
+                        "selected": true,
+                        "display": "U.S. Export Restriction Compliance license",
+                        "value": "C-8000-HSEC"
+                    }
+                ]
+            },
+            {
+                "key": "pim",
+                "display": "Pluggable Modules",
+                "type": "checkbox",
+                "value": 0,
+                "options": [
+                    {
+                        "selected": true,
+                        "display": "None",
+                        "value": 0
+                    },
+                    {
+                        "selected": false,
+                        "display": "CAT6 LTE Advanced Pluggable for APAC, LATAM and ANZ",
+                        "value": "P-LTEA-LA"
+                    },
+                    {
+                        "selected": false,
+                        "display": "CAT6 LTE Advanced Pluggable for Europe and North America",
+                        "value": "P-LTEA-EA"
+                    },
+                    {
+                        "selected": false,
+                        "display": "CAT18 LTE Advanced PRO Pluggable for ALL Global Regions",
+                        "value": "P-LTEAP18-GL"
+                    }
+                ]
+            },
+            {
                 "key": "console_cables",
                 "display": "Console Cables",
                 "type": "checkbox",
@@ -184,6 +297,24 @@
                         "selected": false,
                         "display": "CAT18 LTE Advanced PRO Pluggable for ALL Global Regions",
                         "value": "CAB-ETH-S-RJ45"
+                    }
+                ]
+            },
+            {
+                "key": "rfid",
+                "display": "RFID Option",
+                "type": "checkbox",
+                "value": "None",
+                "options": [
+                    {
+                        "selected": true,
+                        "display": "None",
+                        "value": "None"
+                    },
+                    {
+                        "selected": false,
+                        "display": "RFID - 1RU",
+                        "value": "C-RFID-1R"
                     }
                 ]
             }

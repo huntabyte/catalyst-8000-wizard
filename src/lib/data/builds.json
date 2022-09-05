@@ -1,0 +1,132 @@
+[
+    {
+        "id": 1,
+        "pn": "C8200L-1N-4T",
+        "dram": {
+            "display": "Memory",
+            "value": "MEM-C8200-4GB",
+            "options": [
+                {
+                    "display": "Cisco Catalyst 8200 Edge 16GB memory",
+                    "value": "MEM-C8200-4GB"
+                },
+                {
+                    "display": "Cisco Catalyst 8200 Edge 16GB memory",
+                    "value": "MEM-C8200-16GB"
+                },
+                {
+                    "display": "Cisco Catalyst 8200 Edge 16GB memory",
+                    "value": "MEM-C8200-32GB"
+                },
+                {
+                    "display": "Cisco Catalyst 8200 Edge 16GB memory",
+                    "value": "MEM-C8200-8GB"
+                }
+            ]
+        },
+        "storage": {
+            "display": "M.2 Storage",
+            "value": 0,
+            "options": [
+                {
+                    "display": "None",
+                    "value": 0
+                },
+                {
+                    "display": "Cisco Catalyst 8000 Edge M.2 USB 32GB",
+                    "value": "M2USB-32G"
+                },
+                {
+                    "display": "Cisco Catalyst 8000 Edge SSD M.2 NVMe 600GB",
+                    "value": "SSD-M2NVME-600G"
+                }
+            ]
+        },
+        "mode": {
+            "display": "Software Mode",
+            "value": "IOSXE-AUTO-MODE",
+            "options": [
+                {
+                    "display": "IOS XE Autonomous boot up mode for Unified image",
+                    "value": "IOSXE-AUTO-MODE"
+                },
+                {
+                    "display": "IOS XE SD-WAN boot up mode for Unified image",
+                    "value": "IOSXE-CTRL-MODE"
+                }
+            ]
+        },
+        "image": {
+            "display": "Software Image",
+            "value": "SC8KBEUK9-176",
+            "options": [
+                {
+                    "display": "IOS-XE 17.5",
+                    "value": "SC8KBEUK9-175"
+                },
+                {
+                    "display": "IOS-XE 17.6",
+                    "value": "SC8KBEUK9-176"
+                }
+            ]
+        },
+        "power_cable": {
+            "display": "Power Cable",
+            "value": "CAB-AC",
+            "options": [
+                {
+                    "display": "AC Power Cord (North America), C13, NEMA 5-15P, 2.1m",
+                    "value": "CAB-AC"
+                },
+                {
+                    "display": "Power Cord Jumper, C13-C14 Connectors, 2 Meter Length",
+                    "value": "CAB-C13-C14-2M"
+                },
+                {
+                    "display": "AC Power Cord (Europe), C13, CEE 7, 1.5M",
+                    "value": "CAB-ACE"
+                },
+                {
+                    "display": "AC Power Cord (UK), C13, BS 1363, 2.5m",
+                    "value": "CAB-ACU"
+                }
+            ]
+        },
+        "rfid": {
+            "display": "HSEC License",
+            "value": 0,
+            "options": [
+                {
+                    "display": "None",
+                    "value": 0
+                },
+                {
+                    "display": "U.S. Export Restriction Compliance license for C8000 series",
+                    "value": "C-8000-HSEC"
+                }
+            ]
+        },
+        "pim": {
+            "display": "Pluggable Modules",
+            "value": 0,
+            "options": [
+                {
+                    "display": "None",
+                    "value": 0
+                },
+                {
+                    "display": "CAT6 LTE Advanced Pluggable for APAC, LATAM and ANZ",
+                    "value": "P-LTEA-LA"
+                },
+                {
+                    "display": "CAT6 LTE Advanced Pluggable for Europe and North America",
+                    "value": "P-LTEA-EA"
+                },
+                {
+                    "display": "CAT18 LTE Advanced PRO Pluggable for ALL Global Regions",
+                    "value": "P-LTEAP18-GL"
+                }
+            ]
+        }
+    }
+]
