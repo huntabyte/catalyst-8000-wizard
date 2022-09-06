@@ -1,14 +1,12 @@
 <script>
 	import { deviceConfig, selectedDevice } from '$lib/stores';
-	import { getNetworkModules } from '$lib/data/utils';
+	import { getNetworkModules } from '$lib/data/helpers';
 
 	let networkModules = [];
 
 	if ($selectedDevice.nim_qty > 0) {
 		networkModules = getNetworkModules();
 	}
-	console.log(networkModules);
-
 	console.log('Device Config: ' + $deviceConfig);
 	console.log('Selected Device: ' + $selectedDevice);
 </script>
@@ -19,33 +17,25 @@
 			<h1 class="font-medium text-2xl pt-6 pb-3">Customize Device - {$deviceConfig.part_number}</h1>
 			<div class="divider" />
 			<div class="form-control w-full max-w-sm space-y-2">
-				{#if $selectedDevice.nim_qty == 1}
+				{#if $selectedDevice.nim_qty > 0}
 					<label class="label" for="">
 						<span class="label-text text-lg">Network Module</span>
 					</label>
-					<select class="select select-primary select-bordered">
-						<option selected>None</option>
+					<select class="select select-primary select-bordered" bind:value={$deviceConfig.nim_one}>
+						<option selected value={false}>None</option>
 						{#each networkModules as module}
-							<option>{module.part_number}</option>
+							<option value={module.part_number}>{module.part_number}</option>
 						{/each}
 					</select>
-				{:else if $selectedDevice.nim_qty == 2}
-					<label class="label" for="">
-						<span class="label-text text-lg">Network Module 1</span>
-					</label>
-					<select class="select select-primary select-bordered">
-						<option selected>None</option>
-						{#each networkModules as module}
-							<option>{module.part_number}</option>
-						{/each}
-					</select>
+				{/if}
+				{#if $selectedDevice.nim_qty > 1}
 					<label class="label" for="">
 						<span class="label-text text-lg">Network Module 2</span>
 					</label>
-					<select class="select select-primary select-bordered">
-						<option selected>None</option>
+					<select class="select select-primary select-bordered" bind:value={$deviceConfig.nim_two}>
+						<option selected value={false}>None</option>
 						{#each networkModules as module}
-							<option>{module.part_number}</option>
+							<option value={module.part_number}>{module.part_number}</option>
 						{/each}
 					</select>
 				{/if}
