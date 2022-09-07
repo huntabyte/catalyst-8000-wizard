@@ -7,9 +7,9 @@
 	import StartCard from '$lib/components/StartCard.svelte';
 
 	// CHANGEME
-	let pageCounter = 999;
+	let pageCounter = 0;
 	// CHANGEME
-	let currentDevices = [devices[2], devices[4]];
+	let currentDevices = devices;
 	let modular;
 
 	function handleReset() {

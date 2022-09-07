@@ -5,13 +5,15 @@
 	export let results;
 	export let restart;
 
-	console.log('tier:' + $deviceConfig.tier);
-
 	function handleCustomization(device) {
-		$deviceConfig.part_number = device.part_number;
+		$deviceConfig.device.partNumber = device.part_number;
+		if (device.part_number.startsWith('C8300')) {
+			$deviceConfig.memory.partNumber = 'MEM-C8300-8GB';
+		} else if (device.part_number.startsWith('C8200')) {
+			$deviceConfig.memory.partNumber = 'MEM-C8200-4GB';
+		}
+
 		$selectedDevice = device;
-		console.log($selectedDevice);
-		console.log($deviceConfig);
 	}
 </script>
 
@@ -41,13 +43,15 @@
 							<div class="hidden md:pt-4 lg:inline-block mb-2 pb-2">
 								<img src="img/devices/{result.part_number}.webp" alt="Recommended device" />
 							</div>
-							<a
-								href="/customize"
-								on:click={handleCustomization(result)}
-								class="btn btn-ghost text-primary"
-							>
-								Customize & Build
-							</a>
+							{#if !result.part_number.startsWith('C8500')}
+								<a
+									href="/customize?pn=TestPn&tier=testtier"
+									on:click={handleCustomization(result)}
+									class="btn btn-ghost text-primary"
+								>
+									Customize & Build
+								</a>
+							{/if}
 						</div>
 					</div>
 				{/each}

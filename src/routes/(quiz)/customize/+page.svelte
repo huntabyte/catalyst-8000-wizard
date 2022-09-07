@@ -1,45 +1,97 @@
 <script>
 	import { deviceConfig, selectedDevice } from '$lib/stores';
 	import { getNetworkModules } from '$lib/data/helpers';
+	import { DeviceRepo } from '$lib/repos/devices';
+	import SelectInput from './SelectInput.svelte';
 
-	let networkModules = [];
+	const deviceRepo = new DeviceRepo();
 
-	if ($selectedDevice.nim_qty > 0) {
-		networkModules = getNetworkModules();
+	function getPageData() {
+		return deviceRepo.getDeviceData($deviceConfig.device.partNumber);
 	}
-	console.log('Device Config: ' + $deviceConfig);
-	console.log('Selected Device: ' + $selectedDevice);
+
+	const handleBuild = async () => {
+		$deviceConfig.device.description = await deviceRepo.getDeviceDescription(
+			$deviceConfig.device.partNumber
+		);
+		$deviceConfig.memory.description = await deviceRepo.getItemDescription(
+			$deviceConfig.memory.partNumber
+		);
+
+		if ($deviceConfig.nimOne.partNumber) {
+			$deviceConfig.nimOne.description = await deviceRepo.getItemDescription(
+				$deviceConfig.nimOne.partNumber
+			);
+		}
+
+		if ($deviceConfig.nimTwo.partNumber) {
+			$deviceConfig.nimTwo.description = await deviceRepo.getItemDescription(
+				$deviceConfig.nimTwo.partNumber
+			);
+		}
+		if ($deviceConfig.pim.partNumber) {
+			$deviceConfig.pim.description = await deviceRepo.getItemDescription(
+				$deviceConfig.pim.partNumber
+			);
+		}
+		$deviceConfig.powerCable.description = await deviceRepo.getItemDescription(
+			$deviceConfig.powerCable.partNumber
+		);
+
+		console.log($deviceConfig);
+	};
 </script>
 
 <div class="h-full w-full md:container mx-auto">
 	<div class="flex justify-center items-center">
 		<div class="card w-full bg-slate-700 shadow-xl mt-4 px-6 pb-6">
-			<h1 class="font-medium text-2xl pt-6 pb-3">Customize Device - {$deviceConfig.part_number}</h1>
+			<h1 class="font-medium text-2xl pt-6 pb-3">
+				Customize Device - {$deviceConfig.device.partNumber}
+			</h1>
 			<div class="divider" />
-			<div class="form-control w-full max-w-sm space-y-2">
-				{#if $selectedDevice.nim_qty > 0}
-					<label class="label" for="">
-						<span class="label-text text-lg">Network Module</span>
-					</label>
-					<select class="select select-primary select-bordered" bind:value={$deviceConfig.nim_one}>
-						<option selected value={false}>None</option>
-						{#each networkModules as module}
-							<option value={module.part_number}>{module.part_number}</option>
-						{/each}
-					</select>
-				{/if}
-				{#if $selectedDevice.nim_qty > 1}
-					<label class="label" for="">
-						<span class="label-text text-lg">Network Module 2</span>
-					</label>
-					<select class="select select-primary select-bordered" bind:value={$deviceConfig.nim_two}>
-						<option selected value={false}>None</option>
-						{#each networkModules as module}
-							<option value={module.part_number}>{module.part_number}</option>
-						{/each}
-					</select>
-				{/if}
-			</div>
+			{#await getPageData()}Loading...
+			{:then { device, networkModules, powerCables, memory, pluggableModules }}
+				<div class="form-control w-full max-w-sm space-y-2">
+					{#if device.nim_slots > 0}
+						<SelectInput
+							label={'Network Module (Slot 1)'}
+							options={networkModules}
+							none={true}
+							bind:value={$deviceConfig.nimOne.partNumber}
+						/>
+					{/if}
+					{#if device.nim_slots > 1}
+						<SelectInput
+							label={'Network Module (Slot 2)'}
+							options={networkModules}
+							none={true}
+							bind:value={$deviceConfig.nimTwo.partNumber}
+						/>
+					{/if}
+					{#if device.pim_slots > 0}
+						<SelectInput
+							label={'Pluggable Module'}
+							options={pluggableModules}
+							none={true}
+							bind:value={$deviceConfig.pim.partNumber}
+						/>
+					{/if}
+					<SelectInput
+						label={'Power Cable'}
+						options={powerCables}
+						bind:value={$deviceConfig.powerCable.partNumber}
+					/>
+					<SelectInput
+						label={'Memory'}
+						options={memory}
+						bind:value={$deviceConfig.memory.partNumber}
+					/>
+				</div>
+				<div class="form-control w-full max-w-sm space-y-2">
+					<button on:click={handleBuild} class="btn btn-primary mt-6">Generate BOM</button>
+				</div>
+			{/await}
+			<pre>{JSON.stringify($deviceConfig, null, 2)}</pre>
 		</div>
 	</div>
 </div>

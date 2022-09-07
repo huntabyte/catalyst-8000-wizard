@@ -1,19 +1,31 @@
 import { writable } from 'svelte/store';
-import supabase from '$lib/supabase.js';
-
-export const devices = writable([]);
-
-export const loadDevices = async () => {
-	const { data, error } = await supabase.from('devices').select();
-
-	if (error) {
-		return console.error(error);
-	}
-	devices.set(data);
-};
 
 export const deviceConfig = writable({
-	tier: 3
+	device: {
+		partNumber: '',
+		description: ''
+	},
+	tier: 3,
+	powerCable: {
+		partNumber: 'CAB-AC',
+		description: ''
+	},
+	pim: {
+		partNumber: false,
+		description: ''
+	},
+	nimOne: {
+		partNumber: false,
+		description: ''
+	},
+	nimTwo: {
+		partNumber: false,
+		description: ''
+	},
+	memory: {
+		partNumber: '',
+		description: ''
+	}
 });
 
 export const selectedDevice = writable({});

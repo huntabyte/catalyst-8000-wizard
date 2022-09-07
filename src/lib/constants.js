@@ -24,3 +24,12 @@ export const scalability = {
 	fw_sessions: 'Firewall Sessions',
 	vrfs: 'VRFs'
 };
+
+export const dna_lines = {
+	1: ''
+};
+
+export const DNA_T0_DESCRIPTION = 'Cisco DNA Advantage On-Prem Lic 3Y - upto 25M (Aggr, 50M)';
+export const DNA_T1_DESCRIPTION = 'Cisco DNA Advantage On-Prem Lic 3Y - upto 200M (Aggr, 400M)';
+export const DNA_T2_DESCRIPTION = 'Cisco DNA Advantage On-Prem Lic 3Y - upto 1G (Aggr, 2G)';
+export const DNA_T3_DESCRIPTION = 'Cisco DNA Advantage On-Prem Lic 3Y - upto 10G (Aggr, 20G)';
