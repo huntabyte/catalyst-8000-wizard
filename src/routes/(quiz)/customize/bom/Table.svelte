@@ -1,5 +1,12 @@
 <script>
-	export let headings = ['Part Number', 'Description', 'Service Duration', 'Quantity'];
+	export let headings = [
+		'Part Number',
+		'Description',
+		'Duration (Mnths)',
+		'Initial Term(Months)',
+		'Quantity',
+		'Auto Renew Term(Months)'
+	];
 
 	export let data = [];
 </script>
