@@ -1,5 +1,5 @@
 <script>
-	import FaChevronDown from 'svelte-icons/fa/FaChevronDown.svelte';
+	import FaChevronRight from 'svelte-icons/fa/FaChevronRight.svelte';
 	export let action;
 </script>
 
@@ -15,7 +15,7 @@
 	</div>
 	<button on:click={action} class="btn btn-circle btn-primary btn-lg mt-12">
 		<div class="h-8 w-8 text-base-100">
-			<FaChevronDown />
+			<FaChevronRight />
 		</div>
 	</button>
 </div>

@@ -15,7 +15,6 @@
 	function handleReset() {
 		modular = false;
 		currentDevices = devices;
-		pageCounter = 0;
 		purposeChoices = [
 			{
 				content: 'Branch',
@@ -33,6 +32,11 @@
 				value: 2
 			}
 		];
+		if (pageCounter === 0) {
+			pageCounter = 1;
+		} else {
+			pageCounter = 0;
+		}
 	}
 
 	function changePage(num) {
@@ -160,7 +164,7 @@
 		class="flex flex-col justify-center items-center h-full w-full mx-auto px-1.5 md:px-6 overflow-x-hidden"
 	>
 		{#if pageCounter === 0}
-			<StartCard action={() => (pageCounter = 1)} />
+			<StartCard action={() => handleReset()} />
 		{:else if pageCounter === 1}
 			<QuestionBool
 				question={'Will this router be used for voice?'}
