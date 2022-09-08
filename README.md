@@ -12,7 +12,7 @@ Considering the substantial differences between previous generations of Cisco ro
 
 **Client:** SvelteKit, TailwindCSS, DaisyUI
 
-**Server:** Node, Express
+**Server:** SvelteKit
 
 
 ## Acknowledgements
