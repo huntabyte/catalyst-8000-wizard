@@ -1,8 +1,9 @@
 <script>
-	import { deviceConfig, selectedDevice } from '$lib/stores';
+	import { deviceConfig, bom } from '$lib/stores';
 	import { getNetworkModules } from '$lib/data/helpers';
 	import { DeviceRepo } from '$lib/repos/devices';
 	import SelectInput from './SelectInput.svelte';
+	import { genC83002N4T } from '$lib/repos/bomTemplates';
 
 	const deviceRepo = new DeviceRepo();
 
@@ -39,6 +40,8 @@
 		);
 
 		console.log($deviceConfig);
+		let bomData = genC83002N4T($deviceConfig);
+		$bom = bomData;
 	};
 </script>
 
@@ -91,7 +94,6 @@
 					<button on:click={handleBuild} class="btn btn-primary mt-6">Generate BOM</button>
 				</div>
 			{/await}
-			<pre>{JSON.stringify($deviceConfig, null, 2)}</pre>
 		</div>
 	</div>
 </div>

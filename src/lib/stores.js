@@ -29,3 +29,5 @@ export const deviceConfig = writable({
 });
 
 export const selectedDevice = writable({});
+
+export const bom = writable([]);

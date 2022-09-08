@@ -45,7 +45,7 @@
 							</div>
 							{#if !result.part_number.startsWith('C8500')}
 								<a
-									href="/customize?pn=TestPn&tier=testtier"
+									href="/customize"
 									on:click={handleCustomization(result)}
 									class="btn btn-ghost text-primary"
 								>
