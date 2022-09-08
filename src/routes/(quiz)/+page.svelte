@@ -6,9 +6,7 @@
 	import ResultsCard from '$lib/components/ResultsCard.svelte';
 	import StartCard from '$lib/components/StartCard.svelte';
 
-	// CHANGEME
 	let pageCounter = 0;
-	// CHANGEME
 	let currentDevices = devices;
 	let modular;
 
@@ -19,7 +17,6 @@
 		$deviceConfig.pim.partNumber = false;
 		$deviceConfig.memory.partNumber = '';
 		$deviceConfig.powerCable.partNumber = 'CAB-AC';
-		console.log($deviceConfig);
 
 		modular = false;
 		currentDevices = devices;
