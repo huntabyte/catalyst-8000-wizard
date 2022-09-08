@@ -32,6 +32,7 @@
 		"@supabase/supabase-js": "^1.35.6",
 		"daisyui": "^2.24.0",
 		"dotenv": "^16.0.2",
-		"svelte-icons": "^2.1.0"
+		"svelte-icons": "^2.1.0",
+		"xlsx": "https://cdn.sheetjs.com/xlsx-0.18.11/xlsx-0.18.11.tgz"
 	}
 }
