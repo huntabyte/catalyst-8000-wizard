@@ -2,7 +2,7 @@
 	import { deviceConfig, bom } from '$lib/stores';
 	import { DeviceRepo } from '$lib/repos/devices';
 	import SelectInput from './SelectInput.svelte';
-	import { genC83002N4T } from '$lib/repos/bomTemplates';
+	import { generateBOM } from '$lib/repos/bomTemplates';
 	import { goto } from '$app/navigation';
 
 	const deviceRepo = new DeviceRepo();
@@ -40,7 +40,7 @@
 		);
 
 		console.log($deviceConfig);
-		let bomData = genC83002N4T($deviceConfig);
+		let bomData = generateBOM($deviceConfig);
 		$bom = bomData;
 		goto('/customize/bom');
 	};
@@ -58,7 +58,7 @@
 				<div class="form-control w-full max-w-sm space-y-2">
 					{#if device.nim_slots > 0}
 						<SelectInput
-							label={'Network Module (Slot 1)'}
+							label={'Network Module'}
 							options={networkModules}
 							none={true}
 							bind:value={$deviceConfig.nimOne.partNumber}
