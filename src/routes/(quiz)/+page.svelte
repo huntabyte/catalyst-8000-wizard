@@ -13,7 +13,14 @@
 	let modular;
 
 	function handleReset() {
-		$deviceConfig = defaultDeviceConfig;
+		$deviceConfig.device.partNumber = '';
+		$deviceConfig.nimOne.partNumber = false;
+		$deviceConfig.nimTwo.partNumber = false;
+		$deviceConfig.pim.partNumber = false;
+		$deviceConfig.memory.partNumber = '';
+		$deviceConfig.powerCable.partNumber = 'CAB-AC';
+		console.log($deviceConfig);
+
 		modular = false;
 		currentDevices = devices;
 		purposeChoices = [
