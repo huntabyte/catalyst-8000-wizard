@@ -29,7 +29,9 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@supabase/supabase-js": "^1.35.6",
 		"daisyui": "^2.24.0",
+		"dotenv": "^16.0.2",
 		"svelte-icons": "^2.1.0"
 	}
 }

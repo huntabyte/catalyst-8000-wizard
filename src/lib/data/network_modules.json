@@ -1,0 +1,289 @@
+{
+    [
+        {
+            "Part Number": "C-NIM-1X",
+            "Description": "1-port 10Gbps SFP/SFP+ NIM with WAN MACSec",
+            "Type": "Ethernet Layer 3"
+        },
+        {
+            "Part Number": "C-NIM-1M",
+            "Description": "1-port 2.5/1Gbps RJ-45 WAN, 90W Poe 802.3 af/at/bt NIM",
+            "Type": "Ethernet Layer 3"
+        },
+        {
+            "Part Number": "C-NIM-2T",
+            "Description": "2-port 100Mbps/1Gbps dual-mode RJ45/SFP, NIM with WAN MACSec",
+            "Type": "Ethernet Layer 3"
+        },
+        {
+            "Part Number": "NIM-ES2-4",
+            "Description": "Cisco 4-port Gigabit Ethernet switch NIM",
+            "Type": "LAN"
+        },
+        {
+            "Part Number": "NIM-ES2-8",
+            "Description": "Cisco 8-port Gigabit Ethernet switch NIM",
+            "Type": "LAN"
+        },
+        {
+            "Part Number": "NIM-ES2-8-P",
+            "Description": "Cisco 8-port Gigabit Ethernet switch NIM with PoE support",
+            "Type": "LAN"
+        },
+        {
+            "Part Number": "C-SM-16P4M2X",
+            "Description": "Cisco 22-port Catalyst L2 switch module with UADP ASIC",
+            "Type": "LAN"
+        },
+        {
+            "Part Number": "C-SM-40P8M2X",
+            "Description": "Cisco 50-port Catalyst L2 switch module with UADP ASIC",
+            "Type": "LAN"
+        },
+        {
+            "Part Number": "UCS-E160S-M3/K9",
+            "Description": "UCS-E, single-wide, Intel Broadwell 6-core CPU; up to 64 GB RAM, 1-2 HDD",
+            "Type": "Compute"
+        },
+        {
+            "Part Number": "UCS-E180D-M3/K9",
+            "Description": "UCS-E, double-wide, Intel Broadwell 8-core CPU; up to 128 GB RAM, 1-4 HDD",
+            "Type": "Compute"
+        },
+        {
+            "Part Number": "UCS-E1120D-M3/K9",
+            "Description": "UCS-E, double-wide, Intel Broadwell 12-core CPU; up to 128 GB RAM, 1-4 HDD",
+            "Type": "Compute"
+        },
+        {
+            "Part Number": "NIM-2FXO",
+            "Description": "2-port FXO NIM",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "NIM-4FXO",
+            "Description": "4-port FXO NIM",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "NIM-2FXSP",
+            "Description": "2-port FXS NIM",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "NIM-4FXSP",
+            "Description": "4-port FXS NIM",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "NIM-2FXSP/4FXOP",
+            "Description": "2-port FXS and 4-port FXO NIM",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "NIM-4E/M",
+            "Description": "4-port E/M NIM",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "NIM-2BRI-NT/TE",
+            "Description": "2-port BRI (NT and TE) NIM",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "NIM-4BRI-NT/TE",
+            "Description": "4-port BRI (NT and TE) NIM",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "SM-X-8FXS/12FXO",
+            "Description": "8-port FXS and 12-port FXO single-wide service module",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "SM-X-16FXS/2FXO",
+            "Description": "16-port FXS and 2-port FXO single-wide service module",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "SM-X-24FXS/4FXO",
+            "Description": "24-port FXS and 4-port FXO single-wide service module",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "SM-X-72FXS",
+            "Description": "72-port FXS double-wide service module",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "NIM-PVDM-32",
+            "Description": "32-channel Voice DSP NIM Module",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "NIM-PVDM-64",
+            "Description": "64-channel Voice DSP NIM Module",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "NIM-PVDM-128",
+            "Description": "128-channel Voice DSP NIM Module",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "NIM-PVDM-256",
+            "Description": "256-channel Voice DSP NIM Module",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "SM-X-PVDM-3000",
+            "Description": "3080-channel high-density voice DSP module",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "SM-X-PVDM-2000",
+            "Description": "2048-channel high-density voice DSP module",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "SM-X-PVDM-1000",
+            "Description": "1024-channel high-density voice DSP module",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "SM-X-PVDM-500",
+            "Description": "768-channel high-density voice DSP module",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "NIM-1MFT-T1/E1",
+            "Description": "1-port multiflex trunk voice/clear-channel data T1/E1 module",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "NIM-2MFT-T1/E1",
+            "Description": "2-port multiflex trunk voice/clear-channel data T1/E1 module",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "NIM-4MFT-T1/E1",
+            "Description": "4-port multiflex trunk voice/clear-channel data T1/E1 module",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "NIM-8MFT-T1/E1",
+            "Description": "8-port multiflex trunk voice/clear-channel data T1/E1 module",
+            "Type": "Voice"
+        },
+        {
+            "Part Number": "NIM-VAB-A",
+            "Description": "Multi-mode VDSL2/ADSL/2/2+ NIM Annex A",
+            "Type": "DSL Broadband"
+        },
+        {
+            "Part Number": "NIM-VA-B",
+            "Description": "Multi-mode VDSL2/ADSL/2/2+ NIM Annex B",
+            "Type": "DSL Broadband"
+        },
+        {
+            "Part Number": "NIM-VAB-M",
+            "Description": "Multi-mode VDSL2/ADSL/2/2+ NIM Annex M",
+            "Type": "DSL Broadband"
+        },
+        {
+            "Part Number": "NIM-4SHDSL-EA",
+            "Description": "Multi-mode G.SHDSL NIM",
+            "Type": "DSL Broadband"
+        },
+        {
+            "Part Number": "NIM-2BRI-S/T",
+            "Description": "2-port ISDN BRI WAN interface card for data",
+            "Type": "ISDN BRI"
+        },
+        {
+            "Part Number": "NIM-4BRI-S/T",
+            "Description": "4-port ISDN BRI WAN interface card for data",
+            "Type": "ISDN BRI"
+        },
+        {
+            "Part Number": "NIM-1CE1T1-PRI",
+            "Description": "1-port Multiflex trunk voice/channelized data T1/E1 module",
+            "Type": "Channelized T1E1 ISDN PRI"
+        },
+        {
+            "Part Number": "NIM-2CE1T1-PRI",
+            "Description": "2-port Multiflex trunk voice/channelized data T1/E1 module",
+            "Type": "Channelized T1E1 ISDN PRI"
+        },
+        {
+            "Part Number": "NIM-8CE1T1-PRI",
+            "Description": "8-port Multiflex trunk voice/channelized data T1/E1 module",
+            "Type": "Channelized T1E1 ISDN PRI"
+        },
+        {
+            "Part Number": "SM-X-1T3/E3",
+            "Description": "1-port clear-channel T3/E3 service module",
+            "Type": "Serial WAN"
+        },
+        {
+            "Part Number": "NIM-1T",
+            "Description": "1-port serial high-speed WAN interface card",
+            "Type": "Serial WAN"
+        },
+        {
+            "Part Number": "NIM-2T",
+            "Description": "2-port serial high-speed WAN interface card",
+            "Type": "Serial WAN"
+        },
+        {
+            "Part Number": "NIM-4T",
+            "Description": "4-port serial high-speed WAN interface card",
+            "Type": "Serial WAN"
+        },
+        {
+            "Part Number": "NIM-16A",
+            "Description": "16-port Asynchronous Module",
+            "Type": "Async WAN"
+        },
+        {
+            "Part Number": "NIM-24A",
+            "Description": "24-port Asynchronous Module",
+            "Type": "Async WAN"
+        },
+        {
+            "Part Number": "P-5GS6-GL",
+            "Description": "5G Sub-6 GHz Pluggable – Global",
+            "Type": "Wireless WAN"
+        },
+        {
+            "Part Number": "P-LTEAP18-GL",
+            "Description": "4G/CAT18 LTE Advanced Pro Pluggable - Global",
+            "Type": "Wireless WAN"
+        },
+        {
+            "Part Number": "P-LTEA-EA",
+            "Description": "4G/CAT6 LTE Advanced Pluggable for North American and Europe",
+            "Type": "Wireless WAN"
+        },
+        {
+            "Part Number": "P-LTEA-LA",
+            "Description": "4G/ CAT6 LTE Advanced Pluggable for APAC, ANZ, and LATAM",
+            "Type": "Wireless WAN"
+        },
+        {
+            "Part Number": "NIM-LTEA-EA",
+            "Description": "LTE Advanced for Europe and North America",
+            "Type": "Wireless WAN"
+        },
+        {
+            "Part Number": "NIM-LTEA-LA",
+            "Description": "LTE Advanced for Asia Pacific, Australia and LATAM",
+            "Type": "Wireless WAN"
+        },
+        {
+            "Part Number": "C-SM-NIM-ADPT",
+            "Description": "Single-wide 2x NIM carrier module in SM-X form factor",
+            "Type": "NIM Adapter"
+        }
+    ]
+}

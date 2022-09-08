@@ -1,8 +1,20 @@
 <script>
+	import { deviceConfig, selectedDevice } from '$lib/stores';
 	import { specs, performance, scalability } from '$lib/constants.js';
 
 	export let results;
 	export let restart;
+
+	function handleCustomization(device) {
+		$deviceConfig.device.partNumber = device.part_number;
+		if (device.part_number.startsWith('C8300')) {
+			$deviceConfig.memory.partNumber = 'MEM-C8300-8GB';
+		} else if (device.part_number.startsWith('C8200')) {
+			$deviceConfig.memory.partNumber = 'MEM-C8200-4GB';
+		}
+
+		$selectedDevice = device;
+	}
 </script>
 
 <div class="w-full h-full pt-6 md:container md:pt-8 md:mx-auto mb-4">
@@ -21,7 +33,7 @@
 				<div class="w-full md:px-2" />
 				{#each results as result}
 					<div class="w-full md:px-4 py-6 md:pb-2">
-						<div class="flex flex-col h-auto justify-between">
+						<div class="flex flex-col h-full justify-between">
 							<div>
 								<h1 class="font-semibold text-center text-sm sm:text-xl">{result.part_number}</h1>
 								<p class="text-center hidden md:block md:text-xs lg:text-sm pt-2">
@@ -29,8 +41,17 @@
 								</p>
 							</div>
 							<div class="hidden md:pt-4 lg:inline-block mb-2 pb-2">
-								<img src="img/{result.part_number}.webp" alt="Recommended device" />
+								<img src="img/devices/{result.part_number}.webp" alt="Recommended device" />
 							</div>
+							{#if !result.part_number.startsWith('C8500')}
+								<a
+									href="/customize"
+									on:click={handleCustomization(result)}
+									class="btn btn-ghost text-primary"
+								>
+									Customize & Build
+								</a>
+							{/if}
 						</div>
 					</div>
 				{/each}

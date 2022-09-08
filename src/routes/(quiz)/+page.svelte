@@ -1,11 +1,14 @@
 <script>
+	import { deviceConfig } from '$lib/stores';
 	import devices from '$lib/data/devices.json';
 	import QuestionBool from '$lib/components/QuestionBool.svelte';
 	import QuestionMultipleChoice from '$lib/components/QuestionMultipleChoice.svelte';
 	import ResultsCard from '$lib/components/ResultsCard.svelte';
 	import StartCard from '$lib/components/StartCard.svelte';
 
+	// CHANGEME
 	let pageCounter = 0;
+	// CHANGEME
 	let currentDevices = devices;
 	let modular;
 
@@ -40,64 +43,54 @@
 		currentDevices = currentDevices.filter((device) => device.voice == true);
 		modular = true;
 		pageCounter = 2;
-		console.log(currentDevices);
 	}
 
 	function filterSpeed(tier) {
 		if (tier === 3) {
 			currentDevices = currentDevices.filter((device) => device.tier_three == true);
+			$deviceConfig.tier = 3;
 			if (modular) {
 				pageCounter = 999;
-				console.log(currentDevices);
 			} else {
 				pageCounter = 2.5;
-				console.log(currentDevices);
 			}
 			return;
 		} else if (tier === 2) {
 			currentDevices = currentDevices.filter((device) => device.tier_two == true);
-			console.log(currentDevices);
+			$deviceConfig.tier = 2;
 		} else if (tier === 1) {
 			currentDevices = currentDevices.filter((device) => device.tier_one == true);
-			console.log(currentDevices);
+			$deviceConfig.tier = 1;
 		} else if (tier === 0) {
 			currentDevices = currentDevices.filter((device) => device.tier_zero == true);
-			console.log(currentDevices);
+			$deviceConfig.tier = 0;
 		}
 		pageCounter = 3;
-		console.log(currentDevices);
 	}
 
 	function filterFamily(family) {
 		currentDevices = currentDevices.filter((device) => device.family == family);
 		pageCounter = 999;
-		console.log(currentDevices);
 	}
 
 	function filterPurpose(value) {
 		if (value === 0) {
 			currentDevices = currentDevices.filter((device) => device.types.includes('Branch'));
-			console.log(currentDevices);
 		} else if (value === 1) {
 			currentDevices = currentDevices.filter((device) => device.types.includes('WAN Aggregation'));
-			console.log(currentDevices);
 		} else if (value === 2) {
 			currentDevices = currentDevices.filter((device) => device.types.includes('Head-end'));
-			console.log(currentDevices);
 		}
 		pageCounter = 999;
-		console.log(currentDevices);
 	}
 
 	function filterFortyGig(bool) {
 		if (bool) {
 			currentDevices = currentDevices.filter((device) => device.forty_ge == true);
 			pageCounter = 999;
-			console.log(currentDevices);
 		} else {
 			currentDevices = currentDevices.filter((device) => device.forty_ge == false);
 			pageCounter = 2.75;
-			console.log(currentDevices);
 		}
 	}
 
@@ -107,19 +100,15 @@
 			if (currentDevices.length > 2) {
 				purposeChoices.pop();
 				pageCounter = 2.75;
-				console.log(currentDevices);
 			} else {
 				pageCounter = 999;
-				console.log(currentDevices);
 			}
 		} else {
 			currentDevices = currentDevices.filter((device) => device.ten_ge == 0);
 			if (currentDevices.length > 2) {
 				pageCounter = 3.5;
-				console.log(currentDevices);
 			} else {
 				pageCounter = 999;
-				console.log(currentDevices);
 			}
 		}
 	}
