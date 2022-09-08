@@ -2,16 +2,11 @@
 	export let headings = ['Part Number', 'Description', 'Service Duration', 'Quantity'];
 	import { deviceConfig } from '$lib/stores';
 
-	let data = [
-		['C8200-1N-4T', 'Catalyst 8200', '', 1],
-		['CON-SNT-C8200TL1', '36 months of service blah', 36, 1],
-		['MEM-8200-4GB', 'Memory 4GB', '', 1],
-		['C-RFID-1R', 'RFID for Catalyst 8000', '', 1]
-	];
+	export let data = [];
 </script>
 
 <div class="overflow-x-auto">
-	<table class="table table-normal w-full">
+	<table class="table table-compact w-full">
 		<thead>
 			<tr>
 				{#each headings as heading, index (index)}

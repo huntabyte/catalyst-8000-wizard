@@ -1,5 +1,5 @@
 <script>
-	import { deviceConfig } from '$lib/stores';
+	import { deviceConfig, bom } from '$lib/stores';
 	import Table from './Table.svelte';
 </script>
 
@@ -11,7 +11,7 @@
 				<a href="/" class="btn btn-primary btn-sm">Export</a>
 			</div>
 			<div class="divider" />
-			<Table />
+			<Table data={$bom} />
 		</div>
 	</div>
 </div>

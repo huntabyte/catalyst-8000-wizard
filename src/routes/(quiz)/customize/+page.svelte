@@ -1,9 +1,9 @@
 <script>
 	import { deviceConfig, bom } from '$lib/stores';
-	import { getNetworkModules } from '$lib/data/helpers';
 	import { DeviceRepo } from '$lib/repos/devices';
 	import SelectInput from './SelectInput.svelte';
 	import { genC83002N4T } from '$lib/repos/bomTemplates';
+	import { goto } from '$app/navigation';
 
 	const deviceRepo = new DeviceRepo();
 
@@ -42,6 +42,7 @@
 		console.log($deviceConfig);
 		let bomData = genC83002N4T($deviceConfig);
 		$bom = bomData;
+		goto('/customize/bom');
 	};
 </script>
 

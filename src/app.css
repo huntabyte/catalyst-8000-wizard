@@ -7,6 +7,14 @@
     body {
         @apply font-display
     }
+
+    th {
+        @apply bg-gray-900 !important
+    }
+
+    td {
+        @apply bg-gray-800 !important
+    }
 }
 
 .bg-gradient {
