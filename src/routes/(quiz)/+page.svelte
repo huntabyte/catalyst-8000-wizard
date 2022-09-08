@@ -1,5 +1,5 @@
 <script>
-	import { deviceConfig } from '$lib/stores';
+	import { deviceConfig, defaultDeviceConfig } from '$lib/stores';
 	import devices from '$lib/data/devices.json';
 	import QuestionBool from '$lib/components/QuestionBool.svelte';
 	import QuestionMultipleChoice from '$lib/components/QuestionMultipleChoice.svelte';
@@ -13,6 +13,7 @@
 	let modular;
 
 	function handleReset() {
+		$deviceConfig = defaultDeviceConfig;
 		modular = false;
 		currentDevices = devices;
 		purposeChoices = [
