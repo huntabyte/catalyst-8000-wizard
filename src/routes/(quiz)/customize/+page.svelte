@@ -4,6 +4,7 @@
 	import SelectInput from './SelectInput.svelte';
 	import { generateBOM } from '$lib/repos/bomTemplates';
 	import { goto } from '$app/navigation';
+	import Spinner from '$lib/components/Spinner.svelte';
 
 	const deviceRepo = new DeviceRepo();
 
@@ -53,7 +54,8 @@
 				Customize Device - {$deviceConfig.device.partNumber}
 			</h1>
 			<div class="divider" />
-			{#await getPageData()}Loading...
+			{#await getPageData()}
+				<Spinner />
 			{:then { device, networkModules, powerCables, memory, pluggableModules }}
 				<div class="form-control w-full max-w-sm space-y-2">
 					{#if device.nim_slots > 0}
