@@ -164,6 +164,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Catalyst 8000 Wizard</title>
+</svelte:head>
+
 <div class="w-full h-full">
 	<div
 		class="flex flex-col justify-center items-center h-full w-full mx-auto px-1.5 md:px-6 overflow-x-hidden"

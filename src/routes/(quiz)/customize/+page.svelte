@@ -47,6 +47,10 @@
 	};
 </script>
 
+<svelte:head>
+	<title>Catalyst 8000 Wizard | Customize</title>
+</svelte:head>
+
 <div class="h-full w-full md:container mx-auto">
 	<div class="flex justify-center items-center">
 		<div class="card w-full bg-slate-700 shadow-xl mt-4 px-6 pb-6">
