@@ -1,7 +1,7 @@
 # Catalyst 8000 Wizard
 A simple questionnaire application that helps in determining which Catalyst 8000 device you should consider based on your unique requirements.
 
-[Live Demo](https://c8000-selection-wizard.vercel.app/)
+[Live Demo](https://c8000.hj.run/)
 
 
 ## Project Inspiration
